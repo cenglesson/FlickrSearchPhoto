@@ -4,15 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flickr Photo</title>
+    <link href="./style.css" rel="Stylesheet">
+    <script src="https://kit.fontawesome.com/e1c4074796.js" crossorigin=""></script>
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/plasticine/452/flickr.png">
+    <title>Flickr Photo Search App</title>
 </head>
 
+
 <body>
-    <form>
-        <input type="text"><input>
-        <input type="submit" value="search"><input>
-    </form>
-    <ul id="images"></ul>
+    <nav id="main-nav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="about.html">ABOUT</a>
+            <a href="https://www.flickr.com/explore">FLICKR</a>
+        </div>
+    </nav>
+    <span class="burger" id="click"><i class="fas fa-camera-retro"></i></span>
+    <section class="hero">
+        <div class="hero-inner">
+            <h1>FLICKR APP!</h1>
+            <h2>SEARCH YOUR PHOTO</h2>
+            <form class="search-box">
+                <input type="text" id="query">
+                <input type="submit" value="search">
+            </form>
+        </div>
+    </section>
+
+    <article class="gallery-imgs">
+        <figure class="gallery-imgs__image" id="images"></figure>
+    </article>
+
     <script src="./script.js"></script>
 </body>
 
