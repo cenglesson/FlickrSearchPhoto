@@ -15,7 +15,7 @@
     <nav id="main-nav" class="overlay">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <div class="overlay-content">
-            <a href="about.html">ABOUT</a>
+            <a href="about.html">ABOUT THIS APP</a>
             <a href="https://www.flickr.com/explore">FLICKR</a>
         </div>
     </nav>
@@ -23,17 +23,36 @@
     <section class="hero">
         <div class="hero-inner">
             <h1>FLICKR APP!</h1>
-            <h2>SEARCH YOUR PHOTO</h2>
+            <section class="neons">
+                <h2><em>-WINTER EDITION-</em></h2>
+            </section>
             <form class="search-box">
-                <input type="text" id="query">
-                <input type="submit" value="search">
+                <input type="text" id="query" class="searchTerm" placeholder="Enter a word...">
+                <input type="submit" value="search" id="search-button" class="search-btn">
             </form>
         </div>
     </section>
 
-    <article class="gallery-imgs">
-        <figure class="gallery-imgs__image" id="images"></figure>
+
+    <section id="lightbox" class="hide">
+        <img id="imgLoad" />
+        <a id="lightboxClose"><i class="far fa-times-circle"></i></a>
+        <div id="Arrows">
+            <i id="Prev" class="fa fa-chevron-left fa-2x" aria-hidden="true"></i>
+            <i id="Next" class="fa fa-chevron-right fa-2x" aria-hidden="true"></i>
+        </div>
+    </section>
+
+
+    <article>
+        <ul class="gallery" id="images"></ul>
+
     </article>
+
+    <section class="btn-page">
+        <button class="search-btn" id="loadMoreBtn">LOAD MORE</button>
+        <button class="search-btn"><a href="#">GO UP</button>
+    </section>
 
     <script src="./script.js"></script>
 </body>
